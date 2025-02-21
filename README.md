@@ -38,8 +38,7 @@ def transaction_test_view(request):
             raise Exception("Rollback!")  # Force a rollback
     except Exception:
         pass  
-
-    return HttpResponse(
+     return HttpResponse(
         f"MainModel exists: {MainModel.objects.exists()}<br>"
         f"SignalModel exists: {SignalModel.objects.exists()}"
     )
